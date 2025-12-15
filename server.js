@@ -4,6 +4,10 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
+const slotRoutes = require("./routes/slotroutes");
+
+app.use("/api", slotRoutes);
+
 
 
 app.use(cors());
