@@ -1,18 +1,13 @@
 const mongoose = require("mongoose");
-
-const slotSchema = new mongoose.Schema(
-  {
-    slotNumber: {
-      type: Number,
-      required: true,
-      unique: true
+ 
+const slotSchema = new mongoose.Schema({
+    slotNumber: { type: String, required: true, unique: true },
+    isAvailable: { type: Boolean, default: true },
+    location: {
+        x: Number,
+        y: Number
     },
-    isAvailable: {
-      type: Boolean,
-      default: true
-    }
-  },
-  { timestamps: true }
-);
-
+    imageUrl: { type: String }
+});
+ 
 module.exports = mongoose.model("Slot", slotSchema);

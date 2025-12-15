@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 20px;
+}
+
+.slot {
+  height: 80px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.available {
+  background-color: #4caf50; /* green */
+  color: white;
+}
+
+.unavailable {
+  background-color: #f44336; /* red */
+  color: white;
+}
